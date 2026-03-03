@@ -1,0 +1,28 @@
+import leia, { questionInt } from 'readline-sync';
+ 
+let numero1;
+let numero2;
+let operador;
+ 
+numero1 = leia.questionInt("Digite o primeiro número: ");
+operador = leia.question("Digite o operador (+, -, *, /): ");
+numero2 = leia.questionInt("Digite o segundo número: ");
+ 
+switch(operador){
+    case "+":
+        console.log(`${numero1} + ${numero2} = ${numero1 + numero2}`);
+        break;
+    case "-":
+        console.log(`${numero1} - ${numero2} = ${numero1 - numero2}`);
+        break;
+    case "*":
+        console.log(`${numero1} * ${numero2} = ${numero1 * numero2}`);
+        break;
+    case "/":
+        if(numero2 !== 0){
+            console.log(`${numero1} / ${numero2} = ${numero1 / numero2}`);
+        }else{
+            console.log("Erro: Divisão por zero não é permitida.");
+        }
+        break;
+} 
